@@ -1,4 +1,5 @@
 import functools
+from enum import Enum
 from typing import ClassVar, Generic, Optional, TypeVar
 
 import pytest
@@ -547,6 +548,16 @@ def test_private_attr_set_name():
     assert m._private_attr_1._owner_attr_name == 'Model._private_attr_1'
     assert m._private_attr_2 == 2
     assert m._private_attr_2._owner_attr_name == 'Model._private_attr_2'
+
+
+def test_private_attribute_similar_classnames() -> None:
+    class Fullname(str, Enum):
+        pass
+
+    class Full(BaseModel):
+        _priv: object = Fullname
+
+    assert isinstance(Full._priv, ModelPrivateAttr)
 
 
 def test_private_attr_default_descriptor_attribute_error():
