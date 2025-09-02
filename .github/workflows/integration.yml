@@ -10,7 +10,7 @@ jobs:
     name: Test pydantic settings
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Run tests
       run: make test-pydantic-settings
@@ -19,7 +19,7 @@ jobs:
     name: Test pydantic extra types
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Run tests
       run: make test-pydantic-extra-types

@@ -50,12 +50,12 @@ jobs:
           - python-version: ${{ github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'third-party-tests') && '3.11' }}
     steps:
     - name: Checkout FastAPI
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: fastapi/fastapi
 
     - name: Checkout Pydantic
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: pydantic-latest
 
@@ -91,12 +91,12 @@ jobs:
         python-version: ['3.9', '3.10', '3.11', '3.12']
     steps:
     - name: Checkout SQLModel
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: fastapi/sqlmodel
 
     - name: Checkout Pydantic
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: pydantic-latest
 
@@ -132,12 +132,12 @@ jobs:
         python-version: ['3.13']
     steps:
     - name: Checkout Beanie
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: BeanieODM/beanie
 
     - name: Checkout Pydantic
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: pydantic-latest
     - uses: actions/setup-python@v5
@@ -177,12 +177,12 @@ jobs:
         python-version: ['3.9', '3.10', '3.11', '3.12', '3.13']
     steps:
     - name: Checkout openapi-python-client
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: openapi-generators/openapi-python-client
 
     - name: Checkout Pydantic
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: pydantic-latest
 
@@ -221,12 +221,12 @@ jobs:
         python-version: ['3.9', '3.10', '3.11', '3.12']
     steps:
     - name: Checkout Pandera
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: unionai-oss/pandera
 
     - name: Checkout Pydantic
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: pydantic-latest
 
@@ -266,13 +266,13 @@ jobs:
 
     steps:
       - name: Checkout ODMantic
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: sydney-runkle/odmantic
           ref: fix-model-fields-access
 
       - name: Checkout Pydantic
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: pydantic-latest
 
@@ -352,7 +352,7 @@ jobs:
 
     steps:
     - name: Checkout polar
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: polarsource/polar
 
@@ -385,7 +385,7 @@ jobs:
       run: pnpm install --frozen-lockfile && pnpm build
 
     - name: Checkout Pydantic
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: pydantic-latest
 
@@ -436,12 +436,12 @@ jobs:
 
     steps:
       - name: Checkout BentoML
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: bentoml/BentoML
 
       - name: Checkout Pydantic
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: pydantic-latest
 
@@ -483,12 +483,12 @@ jobs:
 
     steps:
       - name: Checkout Semantic Kernel
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: microsoft/semantic-kernel
 
       - name: Checkout Pydantic
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: pydantic-latest
 
@@ -533,12 +533,12 @@ jobs:
 
     steps:
       - name: Checkout Langchain
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: langchain-ai/langchain
 
       - name: Checkout Pydantic
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: pydantic-latest
 
@@ -578,12 +578,12 @@ jobs:
 
     steps:
       - name: Checkout Dify
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: langgenius/dify
 
       - name: Checkout Pydantic
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: pydantic-latest
 
